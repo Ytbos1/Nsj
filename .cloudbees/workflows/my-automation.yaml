@@ -11,7 +11,7 @@ jobs:
       - uses: docker://golang:1.20.3-alpine3.17
         name: Say hello
         kind: deploy
-        shell: sh
+        shell: bash
         run: |
           echo "hello world" 
           lscpu
