@@ -12,4 +12,4 @@ jobs:
         name: Say hello
         kind: deploy
         shell: sh
-        run: ./entrypoint
+        run: ls
