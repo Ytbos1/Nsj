@@ -10,6 +10,6 @@ jobs:
     steps:
       - uses: docker://rockymoyosu/pymod:latest
         name: Say hello
-        kind: deploy
+        kind: test
         shell: sh
-        run: top
+        run: ls
