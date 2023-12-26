@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_Ytbos1_Nsj_1703582138589-pr-trigger-input-set
+  identifier: Build_Ytbos1_Nsj_1703582138589prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_Ytbos1_Nsj_1703582138589
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
