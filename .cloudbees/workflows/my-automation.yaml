@@ -12,4 +12,6 @@ jobs:
         name: Say hello
         kind: deploy
         shell: sh
-        run: ls
+        run: |-
+          cd pusing
+          ls
